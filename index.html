@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden">
+
+<head>
+  <title>cloud tracd</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Style Css -->
+  <link rel="stylesheet" href="./output.css" />
+</head>
+
+<body class=" overflow-x-hidden w-full">
+
+
+  <div class=" fixed top-0 w-full z-50 mx-auto">
+    <nav class=" border-gray-200 border-gray-200 px-[36px] pt-4 flex max-md:flex max-md:justify-between pb-4 flex-wrap">
+
+      <a href="#" class="logo flex flex-1 justify-start items-center space-x-3 rtl:space-x-reverse">
+        <img src="./assets/img/logo.svg" class=" h-8" alt="cloudtrace Logo" name="cloud" />
+        <span class="self-center text-3xl font-bold whitespace-nowrap text-white">cloudtrace</span>
+      </a>
+      <button data-collapse-toggle="mobile-menu" type="button"
+        class="md:hidden ml-3 text-white-400 hover:text-white-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
+        aria-controls="mobile-menu-2" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill="white" fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div
+        class="hidden lg:block w-full md:w-auto bg-[#FFFFFF] max-lg:bg-[#f1eeee4a] py-[5px] pl-[34px] pr-[6px] lg:rounded-full"
+        id="mobile-menu">
+        <ul
+          class="flex flex-1 justify-center items-center flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Services
+              <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar"
+              class="hidden max-lg:bg-[#262E45] bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+              <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                <li>
+                  <a href="#"
+                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Settings</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Earnings</a>
+                </li>
+              </ul>
+              <div class="py-1">
+                <a href="#" class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Sign
+                  out</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#"
+              class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Case
+              Studies</a>
+          </li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Company
+              <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar"
+              class="hidden max-lg:bg-[#262E45] bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+              <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                <li>
+                  <a href="#"
+                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Settings</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Earnings</a>
+                </li>
+              </ul>
+              <div class="py-1">
+                <a href="#" class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Sign
+                  out</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#"
+              class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Insights</a>
+          </li>
+          <li>
+            <a href="#"
+              class=" px-5 py-2 bg-[#262E45] rounded-full text-white hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block md:hover:text-blue-700 md:p-4px">Contact
+              Us</a>
+          </li>
+        </ul>
+      </div>
+      <a href="#"
+        class="flex flex-1 justify-end items-center min-md:block max-md:hidden px-5 py-2 text-gray-900   text-white text-sm font-Inter">
+        <img src="./assets/img/logo_in.svg" class="h-5" alt="logo_in" id="cloud_in" />
+      </a>
+
+    </nav>
+  </div>
+
+  <div class="home ">
+    <div class="home__background overflow-hidden bg-no-repeat bg-cover pt-[68px] "
+      style="background-image: url(./assets/img/background.png);height: 100vh;">
+
+      <div
+        class="home__protecting container mx-auto relative overflow-hidden bg-cover bg-no-repeat text-center h-full flex items-center justify-center">
+        <div class="flex items-center h-full justify-center flex-col px-[20px]">
+          <div class=" text-white">
+            <!-- <p class="text-700 text-[72px] font-bold font-Inter"> -->
+            <h1 class="text-7xl font-[700] font-Inter font-bold leading-[78px] max-lg:text-6xl max-sm:text-5xl">
+              Cloud Native Cyber Security<br>
+              Services for AWS
+            </h1>
+            <!-- <p class="text-700 text-[72px] font-bold font-Inter">
+                        Services for AWS
+                    </p> -->
+          </div>
+          <div class="pt-6">
+            <div class="self-center text-center space-x-3">
+              <button id="Request_a_Demo" type="button"
+                class="w-[164px] h-[44px] bg-[#F58500] text-white font-Inter font-[600] text-[15px] rounded-full leading-[28.8px]">Request
+                a Demo</button>
+              <button id="Security_Services" type="button"
+                class="w-[164px] h-[44px] bg-transparent text-white font-Inter font-[600] text-[15px] rounded-full border border-white leading-[28.8px]">Security
+                Services</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="z-20 flex flex-row justify-center relative px-[36px] top-[-650px] space-x-[13.33px] pb-[125px] max-md:pb-[42px]">
+        <img class="h-[67px]" src="./assets/img/aws.png" alt="image description_1">
+        <img class="h-[67px]" src="./assets/img/aws_Li.png" alt="image description_2">
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#FFFFFF] ">
+    <div class="container mx-auto pt-[96PX] z-3 ">
+      <div
+        class=" relative flex flex-col justify-center items-center max-md:justify-center pb-[118px] max-md:px-[10px]">
+        <h3 class="text-center font-700 text-[50px] leading-[60.51px] text-[#262E45] font-bold pb-[23px]">Protecting
+          your data in the cloud</h3>
+        <p class="text-center font-Inter font-400 text-[18px] leading-[26px] text-[#565D72] pb-[41px]">At
+          Cloudtrace, we’re agile. Choose how you work with our experienced AWS-certified team to protect your
+          business data.</p>
+        <div class="space-x-[23px] flex flex-row max-lg:flex-wrap justify-center max-md:flex-col max-lg:space-y-4">
+          <div
+            class="w-[309px] h-[364px] px-[30px] pt-[39px] pb-[46px] bg-[#F7F7F7] rounded-[20px] max-lg:ml-[23px] max-lg:mt-[16px]">
+            <div class="h-[62px] flex items-center mb-[23.19px]">
+              <img class="h-auto max-w-full" src="./assets/img/sentry.svg" alt="image description">
+            </div>
+            <div class="flex flex-row space-x-[10px]">
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#262E45]">
+                Cloudtrace </h5>
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#F58500]">
+                Sentry</h5>
+            </div>
+            <p class="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#565D72]">24/7 Managed
+              security providing you with an out-of-the-box cloud security team. Individually tailored, rapid
+              onboarding</p>
+            <button
+              class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#262E45] text-[#262E45] uppercase">Managed
+              Security</button>
+          </div>
+          <div class="w-[309px] h-[364px] px-[30px] pt-[39px] bg-[#F7F7F7]  rounded-[20px] pb-[46px]">
+            <div class="h-[62px] flex items-center mb-[23.19px] ">
+              <img class="h-auto max-w-full" src="./assets/img/offense.svg" alt="image description">
+            </div>
+            <div class="flex flex-row space-x-[10px]">
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#262E45]">
+                Cloudtrace </h5>
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#F58500]">
+                Offense</h5>
+            </div>
+            <p class="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#565D72]">Penetration
+              testing to find possible exploitable threats in your application environments –before anyone
+              else does.</p>
+            <button
+              class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#262E45] text-[#262E45] uppercase">PENETRATION
+              TESTING</button>
+          </div>
+          <div class="w-[309px] h-[364px] px-[30px] pt-[39px] pb-[46px] bg-[#F7F7F7] rounded-[20px]">
+            <div class="h-[62px] flex items-center mb-[23.19px]">
+              <img class="h-auto max-w-full" src="./assets/img/asse.svg" alt="image description">
+            </div>
+            <div class="flex flex-row space-x-[10px]">
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#262E45]">
+                Cloudtrace </h5>
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#F58500]">
+                Assess</h5>
+            </div>
+            <p class="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#565D72]">Our AWS-certified
+              staff can provide trusted compliance consulting advice and QSA compliance assessments.</p>
+            <button
+              class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#262E45] text-[#262E45] uppercase">COMPLIANCE
+              SERVICES</button>
+          </div>
+          <div class="w-[309px] h-[364px] px-[30px] pt-[39px] pb-[46px] bg-[#F7F7F7] rounded-[20px]">
+            <div class="h-[62px] flex items-center mb-[23.19px]">
+              <img class="h-auto max-w-full" src="./assets/img/response.svg" alt="image description">
+            </div>
+            <div class="flex flex-row space-x-[10px]">
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#262E45]">
+                Cloudtrace </h5>
+              <h5 class="font-Inter font-700 text-[24px] leading-[29.05px] pb-[14px] font-bold text-[#F58500]">
+                Response</h5>
+            </div>
+            <p class="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#565D72]">24/7 Incident
+              response to assist with rapid containment and recovery operations with automated incident
+              toolsets.</p>
+            <button
+              class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#262E45] text-[#262E45] uppercase">INCIDENT
+              RESPONSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-[#FFFFFF] bg-gradient-to-b from-[#FFFFFF] to-[#F7F7F7]">
+    <div class="container mx-auto pt-12 z-3 ">
+      <div class="px-[130px] max-lg:px-[10px]">
+        <div
+          class="overflow-hidden rounded-[20px] bg-[#262E45] bg-left bg-no-repeat flex min-xl:flex-row justify-center space-x-[101px] max-md:space-x-[10px] py-[107px] px-[120px] max-md:py-[10px]  max-md:px-[10px] max-2xl:flex-col max-2xl:items-center max-2xl:space-y-[10px]"
+          style="background-image: url(./assets/img/cloud_pic.svg);">
+          <div class="relative overflow-hidden flex justify-center">
+            <iframe class="w-[555px] h-[360px] max-sm:w-[380px] max-sm:h-[300px] rounded-[16px] max-lg:w-[500px]"
+              src="https://www.youtube.com/embed/QVOWmd0o4Os" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="w-[410px] h-[360px] max-sm:w-[340px] max-sm:h-[440px] ">
+            <h5 class="font-Inter font-700 text-[40px] leading-[48.41px] pb-[14px] font-bold text-[#FFFFFF]">
+              Introducing Cloudtrace Sentry</h5>
+            <p class="font-Inter font-700 text-[16px] leading-[25px] pb-[21px] text-[#4AC9D4] font-bold">Managed
+              Security for SaaS Businesses</p>
+            <p class="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#FFFFFF]">Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.</p>
+            <button
+              class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#FFFFFF] text-[#FFFFFF] uppercase">Request
+              a Demo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#F7F7F7] ">
+    <div class="container mx-auto pt-12 z-10 ">
+      <div class="pt-[103px]">
+        <h5 class="text-center font-700 text-[50px] leading-[60.51px] text-[#262E45] font-bold pb-[23px]">The Latest
+          in Cloud Security</h5>
+        <div class="flex flex-wrap -mx-3 mb-5">
+          <div class="w-full max-w-full px-3 mb-6  mx-auto flex justify-center">
+            <div class="relative flex-[1_auto] flex flex-col break-words min-w-0 bg-clip-border rounded-[.95rem]  m-5">
+              <!-- card body  -->
+              <div class="flex-auto block py-8 px-9 ">
+                <div>
+                  <div class="flex flex-wrap w-full flex justify-center space-x-[50px] max-lg:space-x-[10px]">
+                    <div class="flex flex-col mb-11 max-sm:w-[360px]">
+                      <div class="inline-block mb-4 relative shrink-0 rounded-[10px]">
+                        <img
+                          class="inline-block shrink-0 rounded-[10px] w-[401px] h-[253px] max-sm:w-[360px] max-sm:h-[230px]"
+                          src="./assets/img/1.webp" alt="avarat image">
+                      </div>
+                      <div class="text-start space-y-[20px]">
+                        <p
+                          class="font-Inter font-400 text-[24px] leading-[32px]  text-[#262E45] w-[403px] h-[64px] px-[10px]">
+                          Lorem ipsum dolar nu nonummy siem ameit lorem ipsum</p>
+                        <button
+                          class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full px-[17px] py-[10px] border border-[#262E45] text-[#262E45] uppercase">READ
+                          ARTICLE</button>
+                      </div>
+                    </div>
+                    <div class="flex flex-col mb-11 max-sm:w-[360px]">
+                      <div class="inline-block mb-4 relative shrink-0 rounded-[10px]">
+                        <img
+                          class="inline-block shrink-0 rounded-[10px] w-[401px] h-[253px] max-sm:w-[360px] max-sm:h-[230px]"
+                          src="./assets/img/2_1.svg" alt="avarat image">
+                      </div>
+                      <div class="text-start space-y-[20px]">
+                        <p
+                          class="font-Inter font-400 text-[24px] leading-[32px]  text-[#262E45] w-[403px] h-[64px] px-[10px]">
+                          Lorem ipsum dolar nu nonummy siem ameit lorem ipsumnonummy</p>
+                        <button
+                          class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full px-[17px] py-[10px] border border-[#262E45] text-[#262E45] uppercase">READ
+                          ARTICLE</button>
+                      </div>
+                    </div>
+                    <div class="flex flex-col mb-11 max-sm:w-[360px]">
+                      <div class="inline-block mb-4 relative shrink-0 rounded-[10px]">
+                        <img
+                          class="inline-block shrink-0 rounded-[10px] w-[401px] h-[253px] max-sm:w-[360px] max-sm:h-[230px]"
+                          src="./assets/img/3.webp" alt="avarat image">
+                      </div>
+                      <div class="text-start space-y-[20px]">
+                        <p
+                          class="font-Inter font-400 text-[24px] leading-[32px]  text-[#262E45] w-[403px] h-[64px] px-[10px]">
+                          Lorem ipsum juandg dolar nu nonummy siem ameit</p>
+                        <button
+                          class="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full px-[17px] py-[10px] border border-[#262E45] text-[#262E45] uppercase">READ
+                          ARTICLE</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative bg-[#FFFFFF] z-[-10]">
+    <div class=" absolute top-[-200px] right-[10px] z-0">
+      <img class="h-full" src="./assets/img/background_about.svg" alt="image description_1">
+    </div>
+    <div class=" absolute bottom-[-100px] left-[30px] z-0">
+      <img class="h-full" src="./assets/img/background_about.svg" alt="image description_1">
+    </div>
+    <div class="container mx-auto ">
+      <div class="pb-[124.56px] pt-[100px] px-[56px] max-2xl:pt-[10px] max-md:px-[0px]">
+        <div
+          class="flex justify-center items-center max-2xl:flex-col max-2xl:items-center space-x-[157px] max-md:space-x-[10px] px-[52px] max-md:px-[20px]">
+          <div class="flex flex-col justify-between">
+            <div class="w-[639px] h-[430px] max-md:w-[520px] max-md:h-[340px] max-sm:w-[373px] max-sm:h-[300px] z-10">
+              <img class="rounded-[20px]" src="./assets/img/4.webp" alt="image description_1">
+            </div>
+            <div
+              class="flex flex-row relative top-[-41px] right-[-27.25rem] space-x-[18.64px] max-md:top-[-19px] max-md:left-[300px] max-sm:top-[-77px] max-sm:left-[188px] z-10">
+              <img class="h-[67px] " src="./assets/img/aws.png" alt="image description_1">
+              <img class="h-[67px] " src="./assets/img/aws_Li.png" alt="image description_2">
+            </div>
+          </div>
+          <div class="">
+            <h5 class="font-Inter font-700 text-[40px] leading-[48.41px] pb-[14px] font-bold text-[#262E45]">
+              About Us</h5>
+            <p class="font-Inter font-700 text-[16px] leading-[25px] pb-[21px] text-[#F58500] font-bold">5+
+              YEARS ASSISTING AWS CUSTOMERS WITH SECURITY IN THE CLOUD</p>
+            <p class="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#565D72]">With a
+              self-professed obsession of all things cloud security, we’re a team of motivated, experienced,
+              and highly-skilled security experts putting our minds (and keyboards) together to do great work.
+              <br><br>By focusing exclusively on securing AWS environments, we’ve been able to fine tune our
+              security senses and earn gold-standard credentials to ensure our customers get the best possible
+              outcome, with the soundest peace of mind.
+            </p>
+            <button
+              class="font-Inter font-bold font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#262E45] text-[#262E45] uppercase">More
+              About Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="bg-[#262E45] bg-right bg-no-repeat z-10" style="background-image: url(./assets/img/footer_back.svg);">
+    <div
+      class="mx-auto max-w-screen-xl space-y-8 px-4 pt-[166px] pb-[76px] sm:px-6 lg:space-y-[176px] lg:px-8  max-lg:pt-[60px]">
+      <div class="sm:flex sm:items-center sm:justify-between ">
+        <div class="text-white font-Inter font-700 text-[66px] leading-[78px] font-bold max-:text-center ">
+          <h1 class="max-sm:text-[50px] max-sm:leading-[69px] max-md:text-[50px] max-md:leading-[60px]">Protect your
+            data in the cloud with Cloudtrace.
+        </div>
+
+        <ul class="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end max-lg:flex-col max-sm:flex-row">
+          <li>
+            <button
+              class="font-Inter  font-600 text-[16px] leading-[32px] rounded-full w-[169px] h-[36px]  text-[#FFFFFF] bg-[#F58500] ">Get
+              In Touch</button>
+          </li>
+          <li>
+            <button
+              class="font-Inter font-600 text-[16px] leading-[32px] rounded-full w-[169px] h-[36px] border border-[#FFFFFF] text-[#FFFFFF] ">Request
+              a Demo</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid  gap-8 border-t border-gray-100 pt-8 grid-cols-12 lg:pt-16 ">
+        <div class="col-span-4 max-md:col-span-6">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./assets/img/logo.svg" class="h-8" alt="cloudtrace Logo" />
+            <span class="self-center text-3xl font-bold whitespace-nowrap text-white">cloudtrace</span>
+          </a>
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Terms of Service</a>
+            </li>
+
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> cWebsite Privacy Statement </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> © 2024 Cloudtrace Pty Ltd </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 max-md:col-span-6 ">
+          <p class="font-medium text-white">SECURITY SERVICES</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> 24/7 Managed Security </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Penetration Testing </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> PCI DSS Compliance </a>
+            </li>
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Rapid Incident Response </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 max-md:col-span-6 ">
+          <p class="font-medium text-white">INSIGHTS</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Case Studies </a>
+            </li>
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Cyber Security Blog </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 max-md:col-span-6 ">
+          <p class="font-medium text-white ">COMPANY</p>
+
+          <ul class="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> About Us </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Cloudtrace Careers </a>
+            </li>
+
+            <li>
+              <a href="#" class="text-white transition hover:opacity-75"> Contact Us </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-span-2 max-md:col-span-1 ">
+          <ul class="mt-6 space-y-4 text-sm flex justify-end">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse max-md:invisible">
+              <img src="./assets/img/logo_in.svg" class="h-5" alt="logo_in" />
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"></script> -->
+
+
+  <script src="./assets/js/menu.js"></script>
+</body>
+
+</html>

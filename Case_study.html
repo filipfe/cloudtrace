@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden">
+
+<head>
+    <title>Case_study</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Style Css -->
+    <link rel="stylesheet" href="./output.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="overflow-x-hidden w-full ">
+    <div class=" fixed top-0 w-full z-50 mx-auto">
+        <nav class=" border-gray-200 border-gray-200 px-[36px] pt-4 flex max-md:flex max-md:justify-between pb-4">
+            <div class="container mx-auto flex flex-wrap items-center justify-between">
+                <a href="#" class="logo flex flex-1 justify-start items-center space-x-3 rtl:space-x-reverse">
+                    <img src="./assets/img/logo.svg" class=" h-8" alt="cloudtrace Logo" />
+                    <span class="self-center text-3xl font-bold whitespace-nowrap text-white">cloudtrace</span>
+                </a>
+                <button data-collapse-toggle="mobile-menu" type="button"
+                    class="md:hidden ml-3 text-white-400 hover:text-white-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="white" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class="hidden lg:block w-full md:w-auto bg-[#FFFFFF] max-lg:bg-[#f1eeee4a] py-[5px] pl-[34px] pr-[6px] lg:rounded-full"
+                    id="mobile-menu">
+                    <ul
+                        class="flex flex-1 justify-center items-center flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                              class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Services
+                              <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"></path>
+                              </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                              class="hidden max-lg:bg-[#262E45] bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                              <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                  <a href="#"
+                                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Dashboard</a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Settings</a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Earnings</a>
+                                </li>
+                              </ul>
+                              <div class="py-1">
+                                <a href="#" class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Sign
+                                  out</a>
+                              </div>
+                            </div>
+                          </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Case
+                                Studies</a>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                                class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Company
+                                <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownNavbar"
+                                class="hidden max-lg:bg-[#262E45] bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                                <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Earnings</a>
+                                    </li>
+                                </ul>
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="text-sm hover:bg-gray-100 text-[#262E45] max-lg:text-white block px-4 py-2">Sign
+                                        out</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-[#262E45] hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Insights</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class=" px-5 py-2 bg-[#262E45] rounded-full text-white hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block md:hover:text-blue-700 md:p-4px">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#"
+                    class="flex flex-1 justify-end items-center min-md:block max-md:hidden px-5 py-2 text-gray-900   text-white text-sm font-Inter">
+                    <img src="./assets/img/logo_in.svg" class="h-5" alt="logo_in" />
+                </a>
+            </div>
+        </nav>
+
+
+    </div>
+    <div class="relative Case_study">
+
+        <div class="Case_study__background overflow-hidden bg-no-repeat bg-cover  bg-[#262E45]"
+            style="background-image: url(./assets/img/footer_back.svg); height: 100vh">
+
+            <div
+                class="Case_study__protecting container mx-auto relative overflow-hidden bg-cover bg-no-repeat  h-full flex items-center">
+                <div class="  pb-[118px] px-[300px] max-2xl:px-[10px]">
+
+                    <div class=" pr-[79px] flex flex-col justify-start flex-wrap max-lg:pr-[10px]">
+                        <h5 class="uppercase text-[#F58500] font-Inter font-bold text-[16px] leading-[23px]">CASE STUDY
+                        </h5>
+                        <h3
+                            class="font-700 text-[50px] leading-[60.51px] text-[#262E45] font-bold pb-[23px] text-white">
+                            Helping an innovative compliance company assist their AWS clients to remain compliant at
+                            lower cost.
+                        </h3>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div
+            class="z-20 flex flex-row absolute px-[36px] bottom-[-120px] w-[100%] justify-center pb-[25px] max-md:pb-[42px] max-lg:bottom-[-200px]">
+            <img src="./assets/img/5.webp"
+                class="w-[930px] h-[450px] max-md:w-[600px] max-md:h-[350px] max-sm:w-[370px] max-sm:h-[200px] rounded-[15px]"
+                alt="cloudtrace Logo" />
+        </div>
+    </div>
+
+    <div class="relative pt-[97px] rounded-tl-[60px] rounded-tr-[60px] z-10 top-[-97px] bg-white">
+        <div class="blogpost__lorem container mx-auto pt-[80px] z-3   max-xl:pb-[30px]">
+            <div class=" relative flex flex-col justify-start flex-wrap  px-[300px] max-2xl:px-[10px] ">
+                <div
+                    class="max-sm:h-[300px] max-lg:flex-wrap justify-center max-md:flex-col max-lg:space-y-4 pt-[30.42px] rounded-[20px]">
+                </div>
+
+                <div class=" max-md:px-[10px] pt-[47px]">
+
+
+                    <div Class="button-wrap flex flex-row space-x-[8px] items-center pb-[20px]">
+                        <div class="pr-[69px]">
+                            <img src="./assets/img/case_study_log.png" class="w-[188px] h-[37px] "
+                                alt="cloudtrace Logo" />
+                        </div>
+                        <div class="pl-[55px] space-x-[8px]">
+                            <button
+                                class="button border rounded-full border-[#262E45] py-[7.8px] px-[16px] font-Inter text-[11px] leading-[13.31px] text-700 text-[#262E45] uppercase">
+                                Managed Security
+                            </button>
+                            <button
+                                class="button border rounded-full border-[#262E45] py-[7.8px] px-[16px] font-Inter text-[11px] leading-[13.31px] text-700 text-[#262E45]">
+                                PENETRATION TESTING
+                            </button>
+                            <button
+                                class="button border rounded-full border-[#262E45] py-[7.8px] px-[16px] font-Inter text-[11px] leading-[13.31px] text-700 text-[#262E45]">
+                                COMPLIANCE SERVICES
+                            </button>
+                            <button
+                                class="button border rounded-full border-[#262E45] py-[7.8px] px-[16px] font-Inter text-[11px] leading-[13.31px] text-700 text-[#262E45]">
+                                INCIDENT RESPONSE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content border-t ">
+                        <div class="content-1 active pt-[39px] pb-[39px] ">
+                            <div class="grid grid-cols-12 pb-[39px] border-b border-[#E7E7E7]">
+                                <p
+                                    class="col-span-4 font-bold font-Inter text-700 text-[16px leading-[26px] text-[#262E45]">
+                                    About the Client</p>
+                                <p class="col-span-8 font-Inter text-400 text-[16px] leading-[26px] text-[#565D72]">
+                                    SequenceShift provides innovative, next level compliance solutions
+                                    for
+                                    AWS customers that solve digital transformation problems. ​The SequenceShift
+                                    mission is to enable Amazon Connect customers to quickly and securely accept
+                                    payments in their contact centres by offering fully PCI DSS compliant cloud
+                                    based services that can be accessed without setup fees and ongoing commitments.
+                                </p>
+
+                            </div>
+
+                            <div class="grid grid-cols-12 pt-[39px] pb-[39px] border-b border-[#E7E7E7]">
+                                <p
+                                    class="col-span-4 font-bold font-Inter text-700 text-[16px leading-[26px] text-[#262E45]">
+                                    How We Helped</p>
+                                <p class="col-span-8 font-Inter text-400 text-[16px] leading-[26px] text-[#565D72]">
+                                    SequenceShift has been able to reduce the time and effort required for Amazon
+                                    Connect customers to implement processing of card payments in their contact
+                                    centre. This has allowed AWS customers to maintain PCI DSS compliance at a lower
+                                    cost than traditional on-premise environments via migration of contact centre
+                                    card payment processes to Amazon Connect.
+                                </p>
+
+                            </div>
+
+                            <div class="grid grid-cols-12 pt-[39px] pb-[39px] border-b border-[#E7E7E7]">
+                                <p
+                                    class="col-span-4 font-bold font-Inter text-700 text-[16px leading-[26px] text-[#262E45]">
+                                    Engagement Results</p>
+                                <p class="col-span-8 font-Inter text-400 text-[16px] leading-[26px] text-[#565D72]">
+                                    SequenceShift has been able to reduce the time and effort required for Amazon
+                                    Connect customers to implement processing of card payments in their contact
+                                    centre. This has allowed AWS customers to maintain PCI DSS compliance at a lower
+                                    cost than traditional on-premise environments via migration of contact centre
+                                    card payment processes to Amazon Connect.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="content-2 pt-[39px] pb-[39px]">
+                            <div class="grid grid-cols-12 pb-[39px] border-b border-[#E7E7E7]">
+                                <p
+                                    class="col-span-4 font-bold font-Inter text-700 text-[16px leading-[26px] text-[#262E45]">
+                                    About the Client</p>
+                                <p class="col-span-8 font-Inter text-400 text-[16px] leading-[26px] text-[#565D72]">
+                                    SequenceShift provides innovative, next level compliance solutions
+                                    for
+                                    AWS customers that solve digital transformation problems. ​The SequenceShift
+                                    mission is to enable Amazon Connect customers to quickly and securely accept
+                                    payments in their contact centres by offering fully PCI DSS compliant cloud
+                                    based services that can be accessed without setup fees and ongoing commitments.
+                                </p>
+
+                            </div>
+
+                            <div class="grid grid-cols-12 pt-[39px] pb-[39px] border-b border-[#E7E7E7]">
+                                <p
+                                    class="col-span-4 font-bold font-Inter text-700 text-[16px leading-[26px] text-[#262E45]">
+                                    How We Helped</p>
+                                <p class="col-span-8 font-Inter text-400 text-[16px] leading-[26px] text-[#565D72]">
+                                    SequenceShift has been able to reduce the time and effort required for Amazon
+                                    Connect customers to implement processing of card payments in their contact
+                                    centre. This has allowed AWS customers to maintain PCI DSS compliance at a lower
+                                    cost than traditional on-premise environments via migration of contact centre
+                                    card payment processes to Amazon Connect.
+                                </p>
+
+                            </div>
+
+                            <div class="grid grid-cols-12 pt-[39px] pb-[39px] border-b border-[#E7E7E7]">
+                                <p
+                                    class="col-span-4 font-bold font-Inter text-700 text-[16px leading-[26px] text-[#262E45]">
+                                    Engagement Results</p>
+                                <p class="col-span-8 font-Inter text-400 text-[16px] leading-[26px] text-[#565D72]">
+                                    SequenceShift has been able to reduce the time and effort required for Amazon
+                                    Connect customers to implement processing of card payments in their contact
+                                    centre. This has allowed AWS customers to maintain PCI DSS compliance at a lower
+                                    cost than traditional on-premise environments via migration of contact centre
+                                    card payment processes to Amazon Connect.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="content-2 pt-[39px] pb-[39px]">
+                            <p class="text-[#565D72] font-Inter font-700 text-[22px] leading-[28px]"> Lorem ipsum
+                                dolor
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container mx-auto px-[90px] pb-[145px] max-2xl:px-[10px] ">
+        <div class="grid grid-cols-3 bg-[#F7AD66] bg-right bg-no-repeat px-[132px] py-[40px] max-2xl:px-[60px] max-md:flex max-md:flex-col max-md:items-center rounded-[15px]"
+          style="background-image: url(./assets/img/about_back.svg);">
+          <div class="col-span-2 flex flex-col justify-start py-[14px] max-md:text-center">
+            <h5 class="font-Inter font-700 text-[40px] leading-[48.41px] font-bold text-[#262E45]">
+                In need of cloud native security? </h5>
+            <p class="font-Inter font-700 text-[16px] leading-[24px]  text-[#262E45]">
+                We’re AWS experts who specialise in protecting data in the cloud within AWS environments.</p>
+          </div>
+          <div class="col-span-1 flex justify-end items-center">
+            <button
+              class="font-Inter font-bold font-500 text-[16px] leading-[15.73px] rounded-full px-[30px] py-[16px] text-[#262E45] bg-white">Our Services</button>
+          </div>
+        </div>
+      </div>
+
+    <footer class="relative bg-[#262E45] bg-right bg-no-repeat z-20"
+        style="background-image: url(./assets/img/footer_back.svg);">
+        <div
+            class="mx-auto max-w-screen-xl space-y-8 px-4 pt-[66px] pb-[76px] sm:px-6 lg:space-y-[176px] lg:px-8  max-lg:pt-[60px]">
+
+            <div class="grid  gap-8 pt-8 grid-cols-12 lg:pt-16 ">
+                <div class="col-span-4 max-md:col-span-6">
+                    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/img/logo.svg" class="h-8" alt="cloudtrace Logo" />
+                        <span class="self-center text-3xl font-bold whitespace-nowrap text-white">cloudtrace</span>
+                    </a>
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Terms of Service</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> cWebsite Privacy Statement
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> © 2024 Cloudtrace Pty Ltd
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 max-md:col-span-6 ">
+                    <p class="font-medium text-white">SECURITY SERVICES</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> 24/7 Managed Security </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Penetration Testing </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> PCI DSS Compliance </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Rapid Incident Response </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 max-md:col-span-6 ">
+                    <p class="font-medium text-white">INSIGHTS</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Case Studies </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Cyber Security Blog </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 max-md:col-span-6 ">
+                    <p class="font-medium text-white ">COMPANY</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> About Us </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Cloudtrace Careers </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-white transition hover:opacity-75"> Contact Us </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-span-2 max-md:col-span-1 ">
+                    <ul class="mt-6 space-y-4 text-sm flex justify-end">
+                        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse max-md:invisible">
+                            <img src="./assets/img/logo_in.svg" class="h-5" alt="logo_in" />
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+    <script src="./assets/js/menu.js"></script>
+</body>
+
+</html>
