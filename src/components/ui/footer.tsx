@@ -4,15 +4,14 @@ export default function Footer() {
       className="bg-[#262E45] bg-right bg-no-repeat z-10"
       style={{ backgroundImage: "url(/footer-bg.svg)" }}
     >
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 pt-[166px] pb-[76px] sm:px-6 lg:space-y-[176px] lg:px-8  max-lg:pt-[60px]">
-        <div className="sm:flex sm:items-center sm:justify-between ">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-4 lg:pt-40 pb-4 sm:px-6 lg:space-y-[176px] lg:px-8 pt-12">
+        <div className="sm:flex sm:items-center sm:justify-between gap-8">
           <div className="text-white font-Inter font-700 text-[66px] leading-[78px] font-bold max-:text-center ">
-            <h2 className="max-sm:text-[50px] max-sm:leading-[69px] max-md:text-[50px] max-md:leading-[60px]">
+            <h2 className="text-4xl leading-tight sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
               Protect your data in the cloud with Cloudtrace.
             </h2>
           </div>
-
-          <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end max-lg:flex-col max-sm:flex-row">
+          <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end max-lg:flex-col max-sm:flex-row flex-wrap sm:flex-nowrap">
             <li>
               <button className="font-Inter  font-600 text-[16px] leading-[32px] rounded-full w-[169px] h-[36px]  text-[#FFFFFF] bg-[#F58500] ">
                 Get In Touch
@@ -25,8 +24,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
-        <div className="grid  gap-8 border-t border-gray-100 pt-8 grid-cols-12 lg:pt-16 ">
+        <div className="flex flex-col sm:grid gap-8 border-t border-gray-100 pt-8 grid-cols-12 lg:pt-16">
           <div className="col-span-4 max-md:col-span-6">
             <a
               href="#"
