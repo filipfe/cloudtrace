@@ -5,14 +5,16 @@ export default function Home() {
     <>
       <div className="home">
         <div
-          className="home__background overflow-hidden bg-no-repeat bg-cover min-h-screen grid place-content-center relative"
+          className="home__background overflow-hidden bg-no-repeat bg-top bg-cover min-h-screen grid place-content-center relative"
           style={{ backgroundImage: "url(background.png)" }}
         >
-          <div className="flex items-center h-full justify-center flex-col px-[20px] text-center">
-            <div className="flex items-center gap-3 mb-6">
-              <img className="h-[67px]" src="/aws.png" alt="description_1" />
-              <img className="h-[67px]" src="/aws_Li.png" alt="description_2" />
-            </div>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-[#102548] to-[50%]"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#102548]/25 z-10"></div>
+          <div className="flex items-center gap-3 absolute left-8 bottom-8 z-10">
+            <img className="h-[67px]" src="/aws.png" alt="description_1" />
+            <img className="h-[67px]" src="/aws_Li.png" alt="description_2" />
+          </div>
+          <div className="flex items-center h-full justify-center flex-col px-5 text-center relative z-10">
             <div className=" text-white">
               <h1 className="text-7xl font-Inter font-bold leading-[78px] max-lg:text-6xl max-sm:text-5xl">
                 Cloud Native Cyber Security
@@ -41,7 +43,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto max-w-7xl sm:py-24 py-16 px-6">
+      <div className="w-full mx-auto max-w-7xl sm:py-24 py-16 px-6">
         <div className=" relative flex flex-col justify-center items-center max-md:justify-center">
           <h3 className="text-center font-700 text-[50px] leading-[60.51px] text-[#262E45] font-bold pb-[23px]">
             Protecting your data in the cloud

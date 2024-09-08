@@ -6,6 +6,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#F58500",
+        light: "#565D72",
+        foreground: "#262E45",
       },
     },
   },

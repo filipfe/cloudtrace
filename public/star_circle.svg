@@ -1,10 +1,10 @@
 <svg width="167" height="168" viewBox="0 0 167 168" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse cx="83.5" cy="84" rx="83.5" ry="84" fill="#262E45" fill-opacity="0.5"/>
-<path d="M166.75 84C166.75 130.255 129.476 167.75 83.5 167.75C37.5237 167.75 0.25 130.255 0.25 84C0.25 37.7447 37.5237 0.25 83.5 0.25C129.476 0.25 166.75 37.7447 166.75 84Z" stroke="white" stroke-opacity="0.75" stroke-width="0.5"/>
-<path d="M61.1621 71.4844L83.6282 84.2356V110.648" stroke="white" stroke-width="1.78841" stroke-miterlimit="10"/>
-<path d="M105.488 71.7871L83.6289 84.2353" stroke="white" stroke-width="1.78841" stroke-miterlimit="10"/>
-<path d="M115.684 66.8829L83.3256 48.2002L50.9668 66.8829V104.248L83.3256 122.93L115.684 104.248V66.8829Z" stroke="white" stroke-width="1.78841" stroke-miterlimit="10"/>
-<path d="M69.4128 92.2812L43 108.372" stroke="#F58500" stroke-width="1.78841" stroke-miterlimit="10"/>
-<path d="M97.2422 92.2812L123.655 108.372" stroke="#F58500" stroke-width="1.78841" stroke-miterlimit="10"/>
-<path d="M83.3262 68.1452V39" stroke="#F58500" stroke-width="1.78841" stroke-miterlimit="10"/>
+<path d="M166.75 84C166.75 130.255 129.476 167.75 83.5 167.75C37.5237 167.75 0.25 130.255 0.25 84C0.25 37.7447 37.5237 0.25 83.5 0.25C129.476 0.25 166.75 37.7447 166.75 84Z" stroke="white" stroke-opacity="0.75" strokeWidth="0.5"/>
+<path d="M61.1621 71.4844L83.6282 84.2356V110.648" stroke="white" strokeWidth="1.78841" strokeMiterlimit="10"/>
+<path d="M105.488 71.7871L83.6289 84.2353" stroke="white" strokeWidth="1.78841" strokeMiterlimit="10"/>
+<path d="M115.684 66.8829L83.3256 48.2002L50.9668 66.8829V104.248L83.3256 122.93L115.684 104.248V66.8829Z" stroke="white" strokeWidth="1.78841" strokeMiterlimit="10"/>
+<path d="M69.4128 92.2812L43 108.372" stroke="#F58500" strokeWidth="1.78841" strokeMiterlimit="10"/>
+<path d="M97.2422 92.2812L123.655 108.372" stroke="#F58500" strokeWidth="1.78841" strokeMiterlimit="10"/>
+<path d="M83.3262 68.1452V39" stroke="#F58500" strokeWidth="1.78841" strokeMiterlimit="10"/>
 </svg>
