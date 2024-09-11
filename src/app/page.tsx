@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Cloudtrace",
+};
 
 export default function Home() {
   return (
@@ -16,14 +21,14 @@ export default function Home() {
           </div>
           <div className="flex items-center h-full justify-center flex-col px-5 text-center relative z-10">
             <div className=" text-white">
-              <h1 className="text-7xl font-Inter font-bold leading-[78px] max-lg:text-6xl max-sm:text-5xl">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-Inter font-bold leading-tight sm:leading-tight lg:leading-tight">
                 Cloud Native Cyber Security
                 <br />
                 Services for AWS
               </h1>
             </div>
             <div className="pt-6">
-              <div className="self-center text-center space-x-3">
+              <div className="flex items-center gap-3 flex-wrap justify-center">
                 <button
                   id="Request_a_Demo"
                   type="button"
@@ -171,9 +176,9 @@ export default function Home() {
           <h2 className="text-center font-700 text-4xl lg:text-5xl text-[#262E45] font-bold mb-12 lg:mb-16">
             The Latest in Cloud Security
           </h2>
-          <div className="flex flex-col md:grid grid-cols-3 gap-6 xl:gap-12">
-            <div className="flex flex-col gap-3">
-              <div className="rounded-xl overflow-hidden h-64">
+          <div className="flex flex-col md:grid grid-cols-3 gap-12">
+            <div className="flex flex-col sm:items-center gap-6">
+              <div className="rounded-xl overflow-hidden w-full h-64">
                 <Image
                   width={400}
                   height={256}
@@ -182,17 +187,15 @@ export default function Home() {
                   alt="avatar"
                 />
               </div>
-              <div className="text-start space-y-5">
-                <p className="font-Inter font-400 text-[24px] leading-[32px] text-[#262E45] max-w-sm">
-                  Lorem ipsum dolar nu nonummy siem ameit lorem ipsum
-                </p>
-                <button className="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full px-[17px] py-[10px] border border-[#262E45] text-[#262E45] uppercase">
-                  READ ARTICLE
-                </button>
-              </div>
+              <p className="sm:text-lg lg:text-xl sm:text-center max-w-sm">
+                Lorem ipsum dolar nu nonummy siem ameit lorem ipsum
+              </p>
+              <button className="max-w-max text-sm rounded-full px-4 py-2 border border-[#262E45] uppercase">
+                Press Release
+              </button>
             </div>
-            <div className="flex flex-col gap-3">
-              <div className="rounded-xl overflow-hidden h-64">
+            <div className="flex flex-col sm:items-center gap-6">
+              <div className="rounded-xl w-full overflow-hidden h-64">
                 <Image
                   width={400}
                   height={256}
@@ -201,17 +204,15 @@ export default function Home() {
                   alt="avatar"
                 />
               </div>
-              <div className="text-start space-y-5">
-                <p className="font-Inter font-400 text-[24px] leading-[32px] text-[#262E45] max-w-sm">
-                  Lorem ipsum dolar nu nonummy siem ameit lorem ipsum
-                </p>
-                <button className="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full px-[17px] py-[10px] border border-[#262E45] text-[#262E45] uppercase">
-                  READ ARTICLE
-                </button>
-              </div>
+              <p className="sm:text-lg lg:text-xl sm:text-center max-w-sm">
+                Lorem ipsum dolar nu nonummy siem ameit lorem ipsum
+              </p>
+              <button className="max-w-max text-sm rounded-full px-4 py-2 border border-[#262E45] uppercase">
+                Press Release
+              </button>
             </div>
-            <div className="flex flex-col gap-3">
-              <div className="rounded-xl overflow-hidden h-64">
+            <div className="flex flex-col sm:items-center gap-6">
+              <div className="rounded-xl overflow-hidden w-full h-64">
                 <Image
                   width={400}
                   height={256}
@@ -220,14 +221,12 @@ export default function Home() {
                   alt="avatar"
                 />
               </div>
-              <div className="text-start space-y-5">
-                <p className="font-Inter font-400 text-[24px] leading-[32px] text-[#262E45] max-w-sm">
-                  Lorem ipsum dolar nu nonummy siem ameit lorem ipsum
-                </p>
-                <button className="font-Inter font-500 text-[13px] leading-[15.73px] rounded-full px-[17px] py-[10px] border border-[#262E45] text-[#262E45] uppercase">
-                  READ ARTICLE
-                </button>
-              </div>
+              <p className="sm:text-lg lg:text-xl sm:text-center max-w-sm">
+                Lorem ipsum dolar nu nonummy siem ameit lorem ipsum
+              </p>
+              <button className="max-w-max text-sm rounded-full px-4 py-2 border border-[#262E45] uppercase">
+                Press Release
+              </button>
             </div>
           </div>
         </div>
@@ -266,26 +265,30 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div>
-              <h2 className="font-Inter font-700 text-[40px] leading-[48.41px] pb-[14px] font-bold text-[#262E45]">
-                About Us
+            <div className="grid gap-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-tight lg:leading-tight">
+                Our focus
               </h2>
-              <h3 className="font-Inter font-700 text-[16px] leading-[25px] pb-[21px] text-[#F58500] font-bold">
-                5+ YEARS ASSISTING AWS CUSTOMERS WITH SECURITY IN THE CLOUD
-              </h3>
-              <p className="font-Inter font-300 text-[16px] leading-[25px] pb-[21px] text-[#565D72]">
-                With a self-professed obsession of all things cloud security,
-                we&apos;re a team of motivated, experienced, and highly-skilled
-                security experts putting our minds (and keyboards) together to
-                do great work.
-                <br />
-                <br />
-                By focusing exclusively on securing AWS environments, we&apos;ve
-                been able to fine tune our security senses and earn
-                gold-standard credentials to ensure our customers get the best
-                possible outcome, with the soundest peace of mind.
-              </p>
-              <button className="font-Inter font-bold font-500 text-[13px] leading-[15.73px] rounded-full w-[169px] h-[36px] border border-[#262E45] text-[#262E45] uppercase">
+              <div className="grid gap-3">
+                <h3 className="leading-[25px] text-primary font-bold uppercase max-w-72">
+                  Enabling the security benefits of Public Cloud
+                </h3>
+                <p className="text-sm sm:text-base text-light">
+                  Cloudtrace is an AWS Advanced Tier Partner accredited with the
+                  Level 1 Managed Security Service Provider (MSSP) competency.
+                  We specialise in securing and protecting modern applications
+                  hosted in AWS, helping organisations of all sizes with the
+                  “security in the cloud” layers of the shared responsibility
+                  model.
+                </p>
+                <p className="text-sm sm:text-base text-light">
+                  We combine offensive and defensive cyber expertise to deliver
+                  services that counter the latest security threats. Our
+                  customers include start-ups, scale-ups, enterprises, state and
+                  federal government.
+                </p>
+              </div>
+              <button className="font-semibold text-sm rounded-full max-w-max py-2.5 px-6 border border-[#262E45] text-[#262E45] uppercase">
                 More About Us
               </button>
             </div>

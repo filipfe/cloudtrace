@@ -4,28 +4,28 @@ export default function Footer() {
       className="bg-[#262E45] bg-right bg-no-repeat z-10"
       style={{ backgroundImage: "url(/footer-bg.svg)" }}
     >
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 lg:pt-40 pb-4 sm:px-6 lg:space-y-[176px] lg:px-8 pt-12">
+      <div className="mx-auto max-w-screen-xl space-y-8 sm:py-28 px-6 sm:space-y-24 py-12">
         <div className="sm:flex sm:items-center sm:justify-between gap-8">
           <div className="text-white font-Inter font-700 text-[66px] leading-[78px] font-bold max-:text-center ">
             <h2 className="text-4xl leading-tight sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
               Protect your data in the cloud with Cloudtrace.
             </h2>
           </div>
-          <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end max-lg:flex-col max-sm:flex-row flex-wrap sm:flex-nowrap">
+          <ul className="mt-8 flex justify-start gap-3 sm:mt-0 sm:justify-end max-lg:flex-col max-sm:flex-row flex-wrap sm:flex-nowrap">
             <li>
-              <button className="font-Inter  font-600 text-[16px] leading-[32px] rounded-full w-[169px] h-[36px]  text-[#FFFFFF] bg-[#F58500] ">
+              <button className="min-w-max py-2.5 px-10 font-semibold text-sm rounded-full text-white bg-primary">
                 Get In Touch
               </button>
             </li>
             <li>
-              <button className="font-Inter font-600 text-[16px] leading-[32px] rounded-full w-[169px] h-[36px] border border-[#FFFFFF] text-[#FFFFFF] ">
+              <button className="min-w-max py-2.5 px-10 font-semibold text-sm rounded-full border border-white text-white">
                 Request a Demo
               </button>
             </li>
           </ul>
         </div>
-        <div className="flex flex-col sm:grid gap-8 border-t border-gray-100 pt-8 grid-cols-12 lg:pt-16">
-          <div className="col-span-4 max-md:col-span-6">
+        <div className="flex items-start justify-between flex-wrap gap-8 border-t border-gray-100 pt-8 lg:pt-16">
+          <div>
             <a
               href="#"
               className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -36,26 +36,22 @@ export default function Footer() {
               </span>
             </a>
             <ul className="mt-6 space-y-4 text-sm">
-              <li>
+              {/* <li>
                 <a href="#" className="text-white transition hover:opacity-75">
                   Terms of Service
                 </a>
               </li>
-
               <li>
                 <a href="#" className="text-white transition hover:opacity-75">
                   Website Privacy Statement
                 </a>
-              </li>
-
-              <li>
-                <a href="#" className="text-white transition hover:opacity-75">
-                  © 2024 Cloudtrace Pty Ltd
-                </a>
+              </li> */}
+              <li className="text-white transition hover:opacity-75">
+                © {new Date().getFullYear()} Cloudtrace Pty Ltd
               </li>
             </ul>
           </div>
-          <div className="col-span-2 max-md:col-span-6 ">
+          <div>
             <p className="font-medium text-white">SECURITY SERVICES</p>
             <ul className="mt-6 space-y-4 text-sm">
               <li>
@@ -83,7 +79,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2 max-md:col-span-6 ">
+          <div>
             <p className="font-medium text-white">INSIGHTS</p>
 
             <ul className="mt-6 space-y-4 text-sm">
@@ -100,7 +96,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2 max-md:col-span-6 ">
+          <div>
             <p className="font-medium text-white ">COMPANY</p>
 
             <ul className="mt-6 space-y-4 text-sm">
@@ -123,8 +119,8 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-span-2 max-md:col-span-1 ">
-            <ul className="mt-6 space-y-4 text-sm flex justify-end">
+          <div>
+            <ul className="space-y-4 text-sm flex justify-end">
               <a
                 href="#"
                 className="flex items-center space-x-3 rtl:space-x-reverse max-md:invisible"

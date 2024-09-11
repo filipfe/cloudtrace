@@ -1,11 +1,10 @@
 export default function LogoIcon() {
   return (
     <svg
-      width="37"
-      height="33"
       viewBox="0 0 37 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-7 sm:w-9"
     >
       <path
         d="M11.0293 1.44112V4.39637C19.9678 1.49524 30.3693 4.20385 36.7615 11.0175V7.1174C29.9115 1.1519 19.8471 -1.11134 11.0293 1.43491V1.44112Z"
