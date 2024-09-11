@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 mx-auto">
       <HeaderWrapper>
-        <nav className=" border-gray-200 px-8 pt-4 flex max-md:flex max-md:justify-between pb-4 flex-wrap">
+        <nav className="border-gray-200 px-6 pt-4 flex max-md:flex max-md:justify-between pb-4 flex-wrap">
           <Link
             href="/"
             className="logo flex flex-1 justify-start items-center space-x-3 rtl:space-x-reverse"
